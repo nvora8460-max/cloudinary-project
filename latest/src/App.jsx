@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
-import api from "./api";
+import api from "./config/api.js";
 
 function App() {
   const [images, setImages] = useState([]);
