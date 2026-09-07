@@ -1,0 +1,80 @@
+:root {
+  /* Premium Dark Theme Core Tokens */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #13131a;
+  --bg-glass: rgba(19, 19, 26, 0.6);
+  --bg-glass-hover: rgba(25, 25, 35, 0.8);
+  
+  --text-primary: #ffffff;
+  --text-secondary: #9494a0;
+  --text-muted: #5e5e6e;
+
+  /* Accent Gradients & Colors */
+  --accent-color: #8a2be2;
+  --accent-glow: rgba(138, 43, 226, 0.4);
+  --gradient-primary: linear-gradient(135deg, #ff007f 0%, #8a2be2 100%);
+  --gradient-secondary: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(138, 43, 226, 0.5);
+
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-glow: 0 0 20px var(--accent-glow);
+
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  font-family: var(--sans);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(255, 0, 127, 0.08), transparent 25%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 700;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+button {
+  font-family: var(--sans);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  box-shadow: var(--shadow-glass);
+}
+
